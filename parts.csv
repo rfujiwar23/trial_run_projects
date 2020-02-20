@@ -1,0 +1,18 @@
+Name,Part,Double,Part_Detected
+Ron Burgundy,alto_1,flute,Alto Saxophone 1
+Tony Soprano,alto_2,soprano,Alto Saxophone 2
+Ashley Taylor,tenor_1,clarinet,Tenor Saxophone 1
+Lisa Simpson,tenor_2,clarinet,Tenor Saxophone 2
+Kumar Patel,bari,bass clarinet,Baritone Saxophone
+Joey Gladstone,trumpet_1,,Bb Trumpet 1
+Donna Hotlips,trumpet_2,,Bb Trumpet 2
+Fred Flintstone,trumpet_3,,Bb Trumpet 3
+Moe Syzlak,trumpet_4,,Bb Trumpet 4
+Daffy Duck,trombone_1,,Trombone 1
+Mister Tromboner,trombone_2,,Trombone 2
+Steve Hale,trombone_3,,Trombone 3
+Milhouse Van Houten,trombone_4,tuba,Trombone 4
+Jesse Katsopolis,guitar,,Electric Guitar
+Harold Lee,piano,,Piano
+Bugs Bunny,bass,,Electric Bass
+DJ Tanner,drums,,Drumset
