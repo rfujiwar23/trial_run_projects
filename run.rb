@@ -18,9 +18,14 @@ ensemble = {
 :drums => "DJ Tanner" }
 
 holman_parts = ["alto_sax1", "alto_sax2", "tenor_sax1", "tenor_sax2", "bari_sax", "trumpet_1", "trumpet_2", "trumpet_3", "trumpet_4", "trombone_1", "trombone_2", "trombone_3", "trombone_4", "electric_guitar", "piano", "acoustic_bass", "drumset"]
+
 # need to find a possible javascript code to scan the pdf file for texts like the one above
 davies_parts = ["alto_sax1", "alto_sax2", "tenor_sax1", "tenor_sax2", "bari_sax", "trumpet_1", "trumpet_2", "trumpet_3", "trumpet_4", "trumpet_5", "trombone_1", "trombone_2", "trombone_3", "trombone_4", "electric_guitar", "piano", "acoustic_bass", "drumset"]
 # same as above, need to find a possible javascript code to scan the pdf file for texts like the one above
+
+
+davies_parts = ["alto_sax1", "alto_sax2", "tenor_sax1", "tenor_sax2", "bari_sax", "trumpet_1", "trumpet_2", "trumpet_3", "trumpet_4", "trumpet_5", "trombone_1", "trombone_2", "trombone_3", "trombone_4", "electric_guitar", "piano", "acoustic_bass", "drumset"]
+
 puts ensemble[:drums]
 
 puts "Bill Holman's chart has #{holman_parts.count} parts"
@@ -42,18 +47,20 @@ p saxophones
 result_saxes = saxophones.select {|saxophone| saxophone.include?("Sax")}
 puts result_saxes
 
-
+puts "-------------------------------------------------------------------"
 # create an array for trumpets, spelled out differently
 trumpets = ["Bb Trumpet 1", "Bb Trumpet 2", "Bb Trumpet 3", "Bb Trumpet 4"]
 
 p trumpets
-result_trumpets = saxophones.select {|saxophone| saxophone.include?("trum")}
+result_trumpets = trumpets.select {|trumpet| trumpet.include?("Trum")}
 puts result_trumpets
+
+puts "-------------------------------------------------------------------"
 # create an array for trombones, spelled out differently
 trombones = ["Trombone 1", "Trombone 2", "Trombone 3", "Bass Trombone"]
 
 p trombones
-result_trombones = saxophones.select {|saxophone| saxophone.include?("bone")}
+result_trombones = trombones.select {|trombone| trombone.include?("bone")}
 puts result_trombones
 
 # February 20th 2020
