@@ -17,3 +17,8 @@ and matches it with the corresponding musician.
 Create schedule for rehearsals
 Create profile (band, members)
 Being able to invite members through e-mail
+
+Feb. 21st, 2020
+Create a method to check if the input string matches the already stored string (symbol), regardless of the string length
+(ie: Alto 1 --> Alto Saxophone 1)
+
