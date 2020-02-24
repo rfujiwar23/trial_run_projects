@@ -36,12 +36,14 @@ puts "Put in a sax part name: (ie: Alto Saxophone 1)"
 print ">>"
 saxophone = gets.chomp
 
-
+# get the split string of all instruments in the array
 
 # get the split string of the second string in the array "Alto 2"
 saxophone_1 = saxophone_section[1].gsub(/\s+/m, ' ').strip.split(" ")
 
-# check if the input string matches the "Alto 2" in the array
+# This part below, it is only for the Alto 2 part only
+# check if the input string (class = saxophone) matches the saxophone_section[1] ("Alto 2") in the array
+# then delete that element from the array
 if saxophone.include?(saxophone_1[0])&&saxophone.include?(saxophone_1[1]) == true
    puts saxophone + " is in the array"
    p saxophone_section.delete_if{ |s| s == saxophone_1.join(" ")}
@@ -49,6 +51,9 @@ if saxophone.include?(saxophone_1[0])&&saxophone.include?(saxophone_1[1]) == tru
   puts "try another instrument"
   # Go back to the top and try again.
  end
+
+ # Look through each element in the array, and if the input (saxophone) has a slight match from any from the
+ # saxophone_section, delete that element from the array
 
 
 
@@ -65,4 +70,4 @@ puts saxophone_section.count
 
 # puts saxophone_section["Alto 1"]
 
-p saxophone_section.include?(saxophone_1)
+
