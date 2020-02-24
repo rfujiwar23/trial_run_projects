@@ -21,4 +21,4 @@ string_check = gets.chomp
 # show the split string
 puts split_str
 
-puts string_check.include?(split_str[0]) && string.include?(split_str[1])
+puts string_check.include?(split_str[0]) && string_check.include?(split_str[1])
