@@ -43,9 +43,11 @@ def main(lines)
   # Edit and remove this code as you like.
 
   lines.each_index do |i|
-    word = lines[i]
-    if word.length > 1 && word.length <= 20
-    puts "#{i + 1}: #{word}"
+    $stdin = lines[i]
+    if $stdin.length > 1 && $stdin.length <= 20 && $stdin.match(/\w/)
+    $stdout.puts "I use #{$stdin}"
+    p $stdout.class
+    p $stdin.class
   end
   end
 end
