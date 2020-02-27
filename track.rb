@@ -43,11 +43,11 @@ def main(lines)
   # Edit and remove this code as you like.
 
   lines.each_index do |i|
-    v = lines[i]
-    if v.length > 1 && v.length < 20 && v.match(/\w/)
-    puts "Hello, #{v}!"
+    word = lines[i]
+    if word.length > 1 && word.length <= 20
+    puts "#{i + 1}: #{word}"
   end
   end
 end
 
-main(["hot", "cold", "warmwarmwarmwarmwarmwarmawarm"])
+main(["google", "yahoo", "stackoverflow", "worldwideweb"])
