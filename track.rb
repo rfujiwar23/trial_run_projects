@@ -1,55 +1,33 @@
-# def match(line)
-#   s = line.length
-#   if s > 1 && s < 20 && line.match(/\w/)
-#     puts "Hello #{line}!"
-#   end
+ROMAN_TO_INT = {
+  "I" => 1,
+  "IV" => 4,
+  "V" => 5,
+  "IX" => 9,
+  "X" => 10,
+  "XL" => 40,
+  "L" => 50,
+  "XC" => 90,
+  "C" => 100,
+  "CD" => 400,
+  "D" => 500,
+  "CM" => 900,
+  "M" => 1000
+}
+puts "put roman number:"
+print ">>"
+roman_string = gets.chomp
 
-# end
 
-# puts match('world')
-# puts match('track')
-# puts match('abracatabra')
-# puts match('TUTORIAL')
-# puts match('090909878687597597659765222000000')
-
-# lines = ["1234", "awesome", "090909878687597597659765222000000000"]
-
-# def word(lines)
-#   lines.each_index do |word|
-#     if word.length > 1 && word.length < 20 && word.match(/\w/)
-#     puts "Hello #{lines}!"
-#   end
-#   end
-# end
-
-# word(lines)
-
-def check(phrase)
-  # if phrase.length > 1 && phrase.length < 9
-  phrase.each_with_index do |word|
-    if word.length > 1 && word.length < 20 && word.match(/\w/)
-    puts "Hello, #{word}! (no. of char #{word.length}"
+  number = 0
+  str = roman_string.dup
+  until str.size.zero?
+    last_two_characters = str.slice(-2, 2)
+    if ROMAN_TO_INT.key?(last_two_characters)
+      number += ROMAN_TO_INT[last_two_characters]
+      str.chop!
+    else
+      number += ROMAN_TO_INT[str.slice(-1)]
+    end
+    str.chop!
   end
-  end
-end
-
-check(["handsome", "Beautiful", "limabean", "1909090975445644567th"])
-
-def main(lines)
-  # このコードは標準入力と標準出力を用いたサンプルコードです。
-  # このコードは好きなように編集・削除してもらって構いません。
-  # ---
-  # This is a sample code to use stdin and stdout.
-  # Edit and remove this code as you like.
-
-  lines.each_index do |i|
-    $stdin = lines[i]
-    if $stdin.length > 1 && $stdin.length <= 20 && $stdin.match(/\w/)
-    $stdout.puts "I use #{$stdin}"
-    p $stdout.class
-    p $stdin.class
-  end
-  end
-end
-
-main(["google", "yahoo", "stackoverflow", "worldwideweb"])
+  puts number
